@@ -1,23 +1,13 @@
+import { useState } from 'react';
 import './App.css';
 
 const App = () => {
-  const name = "Daniel";
-  const isNameShowing = false;
+  const [counter,setCounter] = useState(0);
   return (
-    <div className="App"> 
-    {name ? 
-    (
-      <>
-      <h1>{name}</h1>
-      </>
-    )
-    :
-    (
-      <>
-      <h1>test</h1>
-      <h2>There is no name</h2>
-      </>
-    ) }
+    <div className="App">
+      <button onClick={() => setCounter((prevCount) => prevCount - 1 )}>-</button>
+      <h2>{counter}</h2>
+      <button onClick={() => setCounter((prevCount) => prevCount + 1)}>+</button>
     </div>
   );
 }
