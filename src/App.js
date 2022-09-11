@@ -12,7 +12,7 @@ const Person = (props) =>{
 const App = () => {
   return (
     <div className="App"> 
-      <Person name = "Daniel" lastName = "Garcia" age = "23"/>
+      <Person name = "Daniel" lastName = "Garcia" age = {23}/>
       <Person name = "John" lastName = "Doe" age = "?"/>
     </div>
   );
